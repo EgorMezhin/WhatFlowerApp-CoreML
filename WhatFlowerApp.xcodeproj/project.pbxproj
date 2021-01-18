@@ -13,6 +13,7 @@
 		D0E8B2CA25B5E7EF008D6089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E8B2C825B5E7EF008D6089 /* Main.storyboard */; };
 		D0E8B2CC25B5E7F2008D6089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E8B2CB25B5E7F2008D6089 /* Assets.xcassets */; };
 		D0E8B2CF25B5E7F2008D6089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E8B2CD25B5E7F2008D6089 /* LaunchScreen.storyboard */; };
+		D0E8B2DC25B5EE9F008D6089 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D0E8B2DB25B5EE9F008D6089 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D0E8B2CB25B5E7F2008D6089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E8B2CE25B5E7F2008D6089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E8B2D025B5E7F2008D6089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E8B2DB25B5EE9F008D6089 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				D0E8B2CB25B5E7F2008D6089 /* Assets.xcassets */,
 				D0E8B2CD25B5E7F2008D6089 /* LaunchScreen.storyboard */,
 				D0E8B2D025B5E7F2008D6089 /* Info.plist */,
+				D0E8B2DB25B5EE9F008D6089 /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlowerApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E8B2DC25B5EE9F008D6089 /* FlowerClassifier.mlmodel in Sources */,
 				D0E8B2C725B5E7EF008D6089 /* ViewController.swift in Sources */,
 				D0E8B2C325B5E7EF008D6089 /* AppDelegate.swift in Sources */,
 				D0E8B2C525B5E7EF008D6089 /* SceneDelegate.swift in Sources */,
