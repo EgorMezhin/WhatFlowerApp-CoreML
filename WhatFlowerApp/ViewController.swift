@@ -8,6 +8,8 @@
 import UIKit
 import CoreML
 import Vision
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -22,6 +24,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .camera
+        imageView.contentMode = .scaleAspectFit
         
         
     }
@@ -51,7 +54,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             let classification = request.results?.first as? VNClassificationObservation
         
-            self.navigationItem.title = classification?.identifier
+            self.navigationItem.title = classification?.identifier.capitalized
             
         }
         

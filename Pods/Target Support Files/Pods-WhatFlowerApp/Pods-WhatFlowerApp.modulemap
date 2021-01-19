@@ -1,0 +1,6 @@
+framework module Pods_WhatFlowerApp {
+  umbrella header "Pods-WhatFlowerApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
