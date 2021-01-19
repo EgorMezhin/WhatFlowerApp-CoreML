@@ -28,15 +28,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo and the App will try to identify the flower on it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2x-EX-l8M">
+                                <rect key="frame" x="71" y="424" width="272" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="Awp-2S-Pdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sjS-nn-Vwi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="59s-Zj-U1E"/>
                             <constraint firstItem="sjS-nn-Vwi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="82y-ms-gzf"/>
+                            <constraint firstItem="z2x-EX-l8M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HW6-qR-Fk8"/>
                             <constraint firstItem="dQz-Ti-gT4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HWV-fH-vu2"/>
+                            <constraint firstItem="z2x-EX-l8M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OyM-M8-Cxb"/>
                             <constraint firstItem="sjS-nn-Vwi" firstAttribute="top" secondItem="dQz-Ti-gT4" secondAttribute="bottom" constant="8" symbolic="YES" id="ZKi-IB-DvA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sjS-nn-Vwi" secondAttribute="trailing" constant="20" id="aom-Ea-cRg"/>
+                            <constraint firstItem="z2x-EX-l8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fqL-Ib-Pcv"/>
+                            <constraint firstItem="z2x-EX-l8M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYC-hu-7Wt"/>
                             <constraint firstItem="dQz-Ti-gT4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mP3-af-RRW"/>
                             <constraint firstItem="dQz-Ti-gT4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tQD-un-Oq3"/>
                         </constraints>
@@ -49,6 +62,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="hintLabel" destination="z2x-EX-l8M" id="nje-GC-Tbg"/>
                         <outlet property="imageView" destination="dQz-Ti-gT4" id="mHE-zV-dSc"/>
                         <outlet property="labelFlowerInfo" destination="sjS-nn-Vwi" id="MkS-ZF-pT6"/>
                     </connections>
@@ -65,6 +79,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="duS-ic-NJc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24436274948227671" green="0.88023373543180938" blue="0.96851998567581177" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -9,7 +9,7 @@ target 'WhatFlowerApp' do
   
 pod 'Alamofire', '~> 4.4'
 pod 'SwiftyJSON'
-
+pod 'SDWebImage'
 
 post_install do |installer|
  installer.pods_project.targets.each do |target|

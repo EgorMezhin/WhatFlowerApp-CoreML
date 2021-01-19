@@ -10,12 +10,14 @@ import CoreML
 import Vision
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let wikipediaURl = "https://en.wikipedia.org/w/api.php"
     let imagePicker = UIImagePickerController()
     
+    @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelFlowerInfo: UILabel!
     
@@ -26,8 +28,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .camera
-        imageView.contentMode = .scaleAspectFit
-        
+        imageView.contentMode = .scaleAspectFill
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
     }
     
@@ -40,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             
             detect(image: ciImage)
             
-            imageView.image = userPickedImage
+            
             imagePicker.dismiss(animated: true, completion: nil)
         }
     }
@@ -77,12 +79,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let parameters : [String:String] = [
             "format" : "json",
             "action" : "query",
-            "prop" : "extracts",
+            "prop" : "extracts|pageimages",
             "exintro" : "",
             "explaintext" : "",
             "titles" : flowerName,
             "indexpageids" : "",
             "redirects" : "1",
+            "pithumbsize" : "500"
         ]
         
         
@@ -97,6 +100,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 let flowerInfo = flowerJSON["query"]["pages"][pageId]["extract"].stringValue
                 
+                let flowerImageURL = flowerJSON["query"]["pages"][pageId]["thumbnail"]["source"].stringValue
+                
+                self.imageView.sd_setImage(with: URL(string: flowerImageURL))
+                
                 self.labelFlowerInfo.text = flowerInfo
                 
             }
@@ -106,6 +113,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func cameraButtonPressed(_ sender: UIBarButtonItem) {
         
+        hintLabel.removeFromSuperview()
         present(imagePicker, animated: true, completion: nil)
     }
     
