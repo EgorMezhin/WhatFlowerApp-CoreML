@@ -11,8 +11,6 @@ Requirements:
 
 Description:
 
-In the beginning, I was going to make an application for recognizing hotdogs in a photo (yes, the same as the "seafood" in the Silicon Valley TV series, but it turned out that it could be easily converted into an app for recognizing any objects from a photo. The "SqueezeNet" mlmodel was used.
-
 Used Swift capabilities:
 
 - CoreML
