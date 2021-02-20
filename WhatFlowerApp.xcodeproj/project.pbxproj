@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51E7A8AFD2A411748211A373 /* Pods_WhatFlowerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAFCAE2865B08B65AC278C7 /* Pods_WhatFlowerApp.framework */; };
+		D05390DF25E13BE500CBB921 /* Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05390DE25E13BE500CBB921 /* Detection.swift */; };
 		D0E8B2C325B5E7EF008D6089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8B2C225B5E7EF008D6089 /* AppDelegate.swift */; };
 		D0E8B2C525B5E7EF008D6089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8B2C425B5E7EF008D6089 /* SceneDelegate.swift */; };
 		D0E8B2C725B5E7EF008D6089 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E8B2C625B5E7EF008D6089 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		1EAFCAE2865B08B65AC278C7 /* Pods_WhatFlowerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatFlowerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1888DC02D723CFC9D23513 /* Pods-WhatFlowerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerApp.release.xcconfig"; path = "Target Support Files/Pods-WhatFlowerApp/Pods-WhatFlowerApp.release.xcconfig"; sourceTree = "<group>"; };
 		8AC7E0DA4BCB0570A50A27AE /* Pods-WhatFlowerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlowerApp.debug.xcconfig"; path = "Target Support Files/Pods-WhatFlowerApp/Pods-WhatFlowerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D05390DE25E13BE500CBB921 /* Detection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detection.swift; sourceTree = "<group>"; };
 		D0E8B2BF25B5E7EF008D6089 /* WhatFlowerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFlowerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E8B2C225B5E7EF008D6089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E8B2C425B5E7EF008D6089 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D05390D725E130B100CBB921 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0E8B2C225B5E7EF008D6089 /* AppDelegate.swift */,
+				D0E8B2C425B5E7EF008D6089 /* SceneDelegate.swift */,
+				D0E8B2CB25B5E7F2008D6089 /* Assets.xcassets */,
+				D0E8B2CD25B5E7F2008D6089 /* LaunchScreen.storyboard */,
+				D0E8B2DB25B5EE9F008D6089 /* FlowerClassifier.mlmodel */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D05390DA25E1310200CBB921 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0E8B2C825B5E7EF008D6089 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D05390DB25E1312000CBB921 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0E8B2C625B5E7EF008D6089 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D05390DD25E13BBD00CBB921 /* MLDetection */ = {
+			isa = PBXGroup;
+			children = (
+				D05390DE25E13BE500CBB921 /* Detection.swift */,
+			);
+			path = MLDetection;
+			sourceTree = "<group>";
+		};
 		D0E8B2B625B5E7EF008D6089 = {
 			isa = PBXGroup;
 			children = (
@@ -74,14 +112,11 @@
 		D0E8B2C125B5E7EF008D6089 /* WhatFlowerApp */ = {
 			isa = PBXGroup;
 			children = (
-				D0E8B2C225B5E7EF008D6089 /* AppDelegate.swift */,
-				D0E8B2C425B5E7EF008D6089 /* SceneDelegate.swift */,
-				D0E8B2C625B5E7EF008D6089 /* ViewController.swift */,
-				D0E8B2C825B5E7EF008D6089 /* Main.storyboard */,
-				D0E8B2CB25B5E7F2008D6089 /* Assets.xcassets */,
-				D0E8B2CD25B5E7F2008D6089 /* LaunchScreen.storyboard */,
+				D05390DD25E13BBD00CBB921 /* MLDetection */,
+				D05390DB25E1312000CBB921 /* Controllers */,
+				D05390DA25E1310200CBB921 /* Views */,
+				D05390D725E130B100CBB921 /* Supporting Files */,
 				D0E8B2D025B5E7F2008D6089 /* Info.plist */,
-				D0E8B2DB25B5EE9F008D6089 /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlowerApp;
 			sourceTree = "<group>";
@@ -209,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E8B2DC25B5EE9F008D6089 /* FlowerClassifier.mlmodel in Sources */,
+				D05390DF25E13BE500CBB921 /* Detection.swift in Sources */,
 				D0E8B2C725B5E7EF008D6089 /* ViewController.swift in Sources */,
 				D0E8B2C325B5E7EF008D6089 /* AppDelegate.swift in Sources */,
 				D0E8B2C525B5E7EF008D6089 /* SceneDelegate.swift in Sources */,
